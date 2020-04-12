@@ -1,0 +1,40 @@
+void setup()     
+ { 
+          
+      pinMode(11, OUTPUT);          
+         
+        
+ } 
+
+ void loop() 
+
+ { 
+      if(digitalRead(14)==HIGH)//если кнопка нажата ... 
+      { 
+      digitalWrite(11,!digitalRead(11));//инвертируем состояние пина 
+
+       digitalWrite(11, HIGH);              // зажигаем светодиод
+       delay(500);                            // ждем секунду
+       digitalWrite(11, LOW);                  // выключаем светодиод
+       delay(500);  
+      } 
+      if(digitalRead(15)==HIGH)//если кнопка нажата ... 
+      { 
+      digitalWrite(11,!digitalRead(11));//инвертируем состояние пина 
+
+       digitalWrite(11, HIGH);              // зажигаем светодиод
+       delay(100);                            // ждем секунду
+       digitalWrite(11, LOW);                  // выключаем светодиод
+       delay(100);  
+      } 
+       if(digitalRead(16)==HIGH)//если кнопка нажата ... 
+      { 
+      digitalWrite(11,!digitalRead(11));//инвертируем состояние пина 
+
+       digitalWrite(11, HIGH);              // зажигаем светодиод
+       delay(50);                            // ждем секунду
+       digitalWrite(11, LOW);                  // выключаем светодиод
+       delay(50);  
+      }    
+          
+ } 
