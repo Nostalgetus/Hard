@@ -1,7 +1,7 @@
 void setup()     
  { 
           
-      pinMode(11, OUTPUT);          
+      pinMode(11, OUTPUT);                                //сигнал подаётся на пин 11           // signal is fed to pin 11
          
         
  } 
@@ -14,18 +14,18 @@ void setup()
       digitalWrite(11,!digitalRead(11));                    //инвертируем состояние пина         // invert the pin state
 
        digitalWrite(11, HIGH);       // подаём сигнал           // give a signal
-       delay(500);                   // ждем 0,5 секунд         // waiting for 0.05 seconds
+       delay(500);                   // ждем 0,5 секунд         // waiting for 0.5 seconds
        digitalWrite(11, LOW);        // убираем сигнал          //remove the signal
-       delay(500);                   // ждем 0,5 секунд         // waiting for 0.05 seconds
+       delay(500);                   // ждем 0,5 секунд         // waiting for 0.5 seconds
       } 
       if(digitalRead(15)==HIGH)                              //если кнопка нажата А1 на +5V ...  // if the button is pressed A1 to + 5V ...
       { 
       digitalWrite(11,!digitalRead(11));                     //инвертируем состояние пина        // invert the pin state
 
        digitalWrite(11, HIGH);       // подаём сигнал           // give a signal
-       delay(100);                   // ждем 0,1 секунд         // waiting for 0.05 seconds
+       delay(100);                   // ждем 0,1 секунд         // waiting for 0.1 seconds
        digitalWrite(11, LOW);        // убираем сигнал          //remove the signal
-       delay(100);                   // ждем 0,1 секунд         // waiting for 0.05 seconds
+       delay(100);                   // ждем 0,1 секунд         // waiting for 0.1 seconds
       } 
        if(digitalRead(16)==HIGH)                            //если кнопка нажата  А2 на +5V ...  // if the button is pressed A2 to + 5V ...
       { 
