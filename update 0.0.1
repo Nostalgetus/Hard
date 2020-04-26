@@ -1,0 +1,173 @@
+int regim=1; 
+int flag=0; 
+
+ void setup()                                       (digitalRead(15) (А1)- генерация частоты
+ {                                                  (digitalRead(14) (А0)- переключение режимов
+    pinMode(11,OUTPUT);      
+       
+ } 
+
+ void loop() 
+
+ { 
+       
+     if(digitalRead(14)==HIGH&&flag==0)//если кнопка нажата   
+     // и перемення flag равна 0 , то ... 
+     { 
+       regim++;   
+       flag=1; 
+         
+        //это нужно для того что бы с каждым нажатием кнопки 
+        //происходило только одно действие 
+        // плюс защита от "дребезга"  100% 
+          
+        if(regim>10)//ограничим количество режимов 
+        { 
+          regim=1;//так как мы используем только одну кнопку, 
+                    // то переключать режимы будем циклично 
+        } 
+       
+     } 
+       
+      if(digitalRead(14)==LOW&&flag==1)//если кнопка НЕ нажата 
+     //и переменная flag равна - 1 ,то ... 
+     { 
+          
+        flag=0;//обнуляем переменную "knopka" 
+     } 
+      
+       
+       
+    if(regim==1)//первый режим 
+    { 
+      
+      if(digitalRead(15)==HIGH)                            1
+      { 
+      digitalWrite(11,!digitalRead(11));                    
+
+       digitalWrite(11, HIGH);       
+       delay(10);                   
+       digitalWrite(11, LOW);       
+       delay(10);                   
+      }
+       
+    if(regim==2)//второй режим 
+    { 
+
+     if(digitalRead(15)==HIGH)                             2
+      { 
+      digitalWrite(11,!digitalRead(11));                    
+
+       digitalWrite(11, HIGH);       
+       delay(20);                   
+       digitalWrite(11, LOW);       
+       delay(20);                   
+      }
+      
+    if(regim==3)//третий режим 
+    { 
+
+      if(digitalRead(15)==HIGH)                            3
+      { 
+      digitalWrite(11,!digitalRead(11));                    
+
+       digitalWrite(11, HIGH);       
+       delay(30);                   
+       digitalWrite(11, LOW);       
+       delay(30);                   
+      }
+      
+    if(regim==4)//четвертый режим 
+    {
+
+      if(digitalRead(15)==HIGH)                            4
+      { 
+      digitalWrite(11,!digitalRead(11));                    
+
+       digitalWrite(11, HIGH);       
+       delay(40);                   
+       digitalWrite(11, LOW);       
+       delay(40);                   
+      }
+
+    if(regim==5)//пятый режим 
+    { 
+
+      if(digitalRead(15)==HIGH)                           5
+      { 
+      digitalWrite(11,!digitalRead(11));                 
+
+       digitalWrite(11, HIGH);       
+       delay(50);                    
+       digitalWrite(11, LOW);        
+       delay(50);                    
+      } 
+
+   if(regim==6)//шестой режим 
+    { 
+        
+      if(digitalRead(15)==HIGH)                           6
+      { 
+      digitalWrite(11,!digitalRead(11));                 
+
+       digitalWrite(11, HIGH);       
+       delay(60);                    
+       digitalWrite(11, LOW);        
+       delay(60);                    
+      } 
+
+  if(regim==7)//седьмой режим 
+    { 
+
+      if(digitalRead(15)==HIGH)                           7 
+      { 
+      digitalWrite(11,!digitalRead(11));                 
+
+       digitalWrite(11, HIGH);       
+       delay(70);                    
+       digitalWrite(11, LOW);        
+       delay(70);                    
+      }   
+      
+    
+   if(regim==8)//восьмой режим 
+    { 
+
+      if(digitalRead(15)==HIGH)                          8              
+      { 
+      digitalWrite(11,!digitalRead(11));                 
+
+       digitalWrite(11, HIGH);       
+       delay(80);                    
+       digitalWrite(11, LOW);        
+       delay(80);                    
+      }  
+    
+   if(regim==9)//девятый режим 
+    { 
+        
+      if(digitalRead(15)==HIGH)                          9              
+      { 
+      digitalWrite(11,!digitalRead(11));                 
+
+       digitalWrite(11, HIGH);       
+       delay(90);                    
+       digitalWrite(11, LOW);        
+       delay(90);                    
+      }   
+
+     
+    if(regim==10)//десятый режим 
+    { 
+      
+      if(digitalRead(15)==HIGH)                        10              
+      { 
+      digitalWrite(11,!digitalRead(11));                 
+
+       digitalWrite(11, HIGH);       
+       delay(100);                    
+       digitalWrite(11, LOW);        
+       delay(100);                    
+      }   
+
+}
