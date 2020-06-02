@@ -1,8 +1,8 @@
 int regim=1; 
 int flag=0; 
 
- void setup()                                       (digitalRead(15) (А1)- генерация частоты
- {                                                  (digitalRead(14) (А0)- переключение режимов
+ void setup()                                       //(digitalRead(15) (А1)- генерация частоты
+ {                                                  //(digitalRead(14) (А0)- переключение режимов
     pinMode(11,OUTPUT);      
        
  } 
@@ -116,7 +116,7 @@ int flag=0;
        delay(60);                    
       } 
 
-  if(regim==7)//седьмой режим 
+   if(regim==7)//седьмой режим 
     { 
 
       if(digitalRead(15)==HIGH)                           7 
@@ -157,7 +157,7 @@ int flag=0;
       }   
 
      
-    if(regim==10)//десятый режим 
+   if(regim==10)//десятый режим 
     { 
       
       if(digitalRead(15)==HIGH)                        10              
